@@ -12,17 +12,6 @@ AllCops:
   TargetRailsVersion: 7.0
   NewCops: enable
   Exclude:
-    - bin/*
-    - db/schema.rb
-    - lib/tasks/cucumber.rake
-    - sandbox/**/*
-    - public/dispatch.rb
-    - db/migrate/???_*.rb
-    - db/migrate/20[01]*.rb
-    - db/migrate/202[012]*.rb
-    - db/migrate/20230[123]*.rb
-    - tools/**/*
-    - Vagrantfile
     - .toys.rb
 
 Rails:
@@ -52,15 +41,6 @@ Lint/AmbiguousOperatorPrecedence:
 Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
 
-Lint/ConstantDefinitionInBlock:
-  Exclude:
-    - lib/tasks/questions.rake
-    - lib/tasks/quota.rake
-    - lib/tasks/spotlight.rake
-    - lib/tasks/video.rake
-    - lib/tasks/zoom.rake
-    - spec/controllers/api/viewer_resources_controller_spec.rb
-
 Metrics:
   Enabled: false
 
@@ -70,22 +50,8 @@ Naming/MethodParameterName:
 Performance/StringInclude:
   Enabled: false
 
-Performance/StringIdentifierArgument:
-  Exclude:
-    - spec/models/messaging_service_spec.rb
-
-Rails/DynamicFindBy:
-  Exclude:
-    - db/migrate/20120627204103_create_projects.rb
-
 Rails/HelperInstanceVariable:
   Enabled: false
-
-Rails/I18nLocaleTexts:
-  Exclude:
-    - app/controllers/*
-    - app/controllers/**/*
-    - app/mailers/*
 
 Rails/SkipsModelValidations:
   AllowedMethods:
@@ -101,77 +67,6 @@ Rails/UnknownEnv:
 
 RSpec/AnyInstance:
   Enabled: false
-
-RSpec/BeforeAfterAll:
-  Exclude:
-    - spec/models/messaging_service_spec.rb
-
-RSpec/ContextWording:
-  Prefixes:
-    - when
-    - with
-    - without
-    - if
-  Exclude:
-    - spec/apis/data_editors_spec.rb
-    - spec/apis/importer_spec.rb
-    - spec/apis/recorder_spec.rb
-    - spec/controllers/api/focus_groups_controller_spec.rb
-    - spec/controllers/api/import_mappings_controller_spec.rb
-    - spec/controllers/api/metadata_controller_spec.rb
-    - spec/controllers/api/question_details_controller_spec.rb
-    - spec/controllers/api/reports_controller_spec.rb
-    - spec/controllers/api/respondents_controller_spec.rb
-    - spec/controllers/api/transcripts_controller_spec.rb
-    - spec/controllers/api/translations_controller_spec.rb
-    - spec/controllers/api/weight_sets_controller_spec.rb
-    - spec/controllers/notifications/elastic_transcoder_notifications_controller_spec.rb
-    - spec/controllers/notifications/simple_notifications_service_controller_spec.rb
-    - spec/controllers/notifications/slack_notifications_controller_spec.rb
-    - spec/controllers/recorder_controller_spec.rb
-    - spec/demographics_migration_spec.rb
-    - spec/lib/json_schema_validator_spec.rb
-    - spec/lib/language_variant_spec.rb
-    - spec/lib/mrportal_spec.rb
-    - spec/lib/project_encoder_spec.rb
-    - spec/lib/schema_builder_spec.rb
-    - spec/lib/translation_service_spec.rb
-    - spec/media_parameters_spec.rb
-    - spec/models/ability_spec.rb
-    - spec/models/demographic_spec.rb
-    - spec/models/importer_spec.rb
-    - spec/models/messaging_service_spec.rb
-    - spec/models/metadata_spec.rb
-    - spec/models/project_spec.rb
-    - spec/models/publication_spec.rb
-    - spec/models/quota_monitor/monitor_spec.rb
-    - spec/models/respondent_spec.rb
-    - spec/models/rev_ai_transcriber_spec.rb
-    - spec/models/sso_user_spec.rb
-    - spec/models/transcriber_spec.rb
-    - spec/models/transcript_spec.rb
-    - spec/models/translation_spec.rb
-    - spec/models/video_spec.rb
-    - spec/models/viewer_resource_spec.rb
-    - spec/models/weight_set_spec.rb
-    - spec/operations/data_editor/weights_spec.rb
-    - spec/operations/focus_group_question/set_focus_status_spec.rb
-    - spec/operations/import_mapping/upload_spec.rb
-    - spec/operations/importer/transfer_spec.rb
-    - spec/operations/project/translate_spec.rb
-    - spec/operations/quota_monitor/monitor/observe_spec.rb
-    - spec/operations/transcript/determine_segments_spec.rb
-    - spec/operations/transcript/receive_order_spec.rb
-    - spec/operations/transcript/retrieve_translation_spec.rb
-    - spec/operations/transcript/translate_spec.rb
-
-RSpec/DescribeClass:
-  Exclude:
-    - spec/apis/**/*
-    - spec/requests/**/*
-    - spec/demographics_migration_spec.rb
-    - spec/media_parameters_spec.rb
-    - spec/string_extensions_spec
 
 RSpec/ExampleLength:
   Enabled: false
@@ -190,20 +85,6 @@ RSpec/NamedSubject:
 
 RSpec/NestedGroups:
   Max: 5
-
-RSpec/StubbedMock:
-  Exclude:
-    - spec/controllers/notifications/elastic_transcoder_notifications_controller_spec.rb
-    - spec/controllers/notifications/simple_notifications_service_controller_spec.rb
-    - spec/controllers/notifications/slack_notifications_controller_spec.rb
-    - spec/controllers/qreports_controller_spec.rb
-    - spec/controllers/recorder_controller_spec.rb
-    - spec/controllers/videos_controller_spec.rb
-    - spec/controllers/viewer_settings_controller_spec.rb
-    - spec/lib/temporary_file_spec.rb
-    - spec/models/importer_spec.rb
-    - spec/models/messaging_service_spec.rb
-    - spec/operations/quota_monitor/monitor/create_spec.rb
 
 RSpec/SubjectStub:
   Enabled: false
